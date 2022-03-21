@@ -1,0 +1,286 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        tools:context=".MainActivity">
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/icon_cost_of_service"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:importantForAccessibility="no"
+            app:layout_constraintBottom_toBottomOf="@id/til_cost_of_service"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/til_cost_of_service"
+            app:srcCompat="@drawable/ic_store" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/til_cost_of_service"
+            android:layout_width="160dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            app:layout_constraintStart_toEndOf="@id/icon_cost_of_service"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/et_cost_of_service"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:hint="@string/cost_of_service"
+                android:importantForAutofill="no"
+                android:inputType="numberDecimal"
+                android:textCursorDrawable="@drawable/cursor"
+                android:textSize="16sp" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/icon_service_question"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="@id/tv_service_question"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/tv_service_question"
+            app:srcCompat="@drawable/ic_service" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tv_service_question"
+            style="@style/Widget.TipTime.TextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="10dp"
+            android:paddingBottom="10dp"
+            android:text="@string/how_was_your_service"
+            app:layout_constraintStart_toEndOf="@id/icon_service_question"
+            app:layout_constraintTop_toBottomOf="@id/til_cost_of_service" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_decrease_pct"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginTop="10dp"
+            app:icon="@drawable/ic_baseline_remove_24"
+            app:iconGravity="textStart"
+            app:iconPadding="0dp"
+            app:layout_constraintEnd_toStartOf="@id/tv_tip_percentage"
+            app:layout_constraintStart_toStartOf="@id/tv_service_question"
+            app:layout_constraintTop_toBottomOf="@id/tv_service_question"
+            tools:ignore="SpeakableTextPresentCheck" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tv_tip_percentage"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="100dp"
+            android:layout_height="48dp"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:text="@string/base_pct"
+            android:textAlignment="center"
+            android:textSize="26sp"
+            app:layout_constraintEnd_toStartOf="@id/btn_increase_pct"
+            app:layout_constraintStart_toEndOf="@id/btn_decrease_pct"
+            app:layout_constraintTop_toBottomOf="@id/tv_service_question"
+            tools:ignore="SpeakableTextPresentCheck" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_increase_pct"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginTop="10dp"
+            app:icon="@drawable/ic_baseline_add_24"
+            app:iconGravity="textStart"
+            app:iconPadding="0dp"
+            app:layout_constraintStart_toEndOf="@id/tv_tip_percentage"
+            app:layout_constraintTop_toBottomOf="@id/tv_service_question"
+            tools:ignore="SpeakableTextPresentCheck" />
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/icon_people"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="@id/tv_people_question"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/tv_people_question"
+            app:srcCompat="@drawable/ic_people" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tv_people_question"
+            style="@style/Widget.TipTime.TextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="10dp"
+            android:paddingBottom="10dp"
+            android:text="@string/number_people"
+            app:layout_constraintStart_toEndOf="@id/icon_people"
+            app:layout_constraintTop_toBottomOf="@id/tv_tip_percentage" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_decrease_per"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginTop="10dp"
+            app:icon="@drawable/ic_baseline_remove_24"
+            app:iconGravity="textStart"
+            app:iconPadding="0dp"
+            app:layout_constraintEnd_toStartOf="@id/tv_number_people"
+            app:layout_constraintStart_toStartOf="@id/tv_people_question"
+            app:layout_constraintTop_toBottomOf="@id/tv_people_question"
+            tools:ignore="SpeakableTextPresentCheck" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tv_number_people"
+            android:layout_width="100dp"
+            android:layout_height="48dp"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:text="@string/base_num"
+            android:textAlignment="center"
+            android:textSize="26sp"
+            app:layout_constraintEnd_toStartOf="@id/btn_increase_per"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@id/btn_decrease_per"
+            app:layout_constraintTop_toBottomOf="@id/tv_people_question"
+            tools:ignore="SpeakableTextPresentCheck" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_increase_per"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginTop="10dp"
+            app:icon="@drawable/ic_baseline_add_24"
+            app:iconGravity="textStart"
+            app:iconPadding="0dp"
+            app:layout_constraintStart_toEndOf="@id/tv_number_people"
+            app:layout_constraintTop_toBottomOf="@id/tv_people_question"
+            tools:ignore="SpeakableTextPresentCheck" />
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/icon_round_up"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="@id/sw_round_up"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/sw_round_up"
+            app:srcCompat="@drawable/ic_round_up" />
+
+        <com.google.android.material.switchmaterial.SwitchMaterial
+            android:id="@+id/sw_round_up"
+            style="@style/Widget.TipTime.CompoundButton.Switch"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="10dp"
+            android:checked="true"
+            android:text="@string/round_up_tip"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/icon_round_up"
+            app:layout_constraintTop_toBottomOf="@id/tv_number_people" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_calculate"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="@string/calculate"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@id/sw_round_up"
+            app:layout_constraintTop_toBottomOf="@id/sw_round_up" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tv_tip_result"
+            style="@style/Widget.TipTime.TextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="@string/tip_amount"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/btn_calculate" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tv_tip_result_amount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="@string/_0_00"
+            android:textSize="36sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_tip_result" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tv_total"
+            style="@style/Widget.TipTime.TextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="@string/total_with_tip"
+            app:layout_constraintStart_toStartOf="@id/btn_calculate"
+            app:layout_constraintTop_toBottomOf="@id/btn_calculate" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tv_total_amount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="@string/_0_00"
+            android:textSize="36sp"
+            app:layout_constraintStart_toStartOf="@id/tv_total"
+            app:layout_constraintTop_toBottomOf="@id/tv_total" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tv_total_per"
+            style="@style/Widget.TipTime.TextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="@string/per_person"
+            android:visibility="invisible"
+            app:layout_constraintStart_toStartOf="@id/tv_total_amount"
+            app:layout_constraintTop_toBottomOf="@id/tv_total_amount" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tv_total_amount_per"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="@string/_0_00"
+            android:textSize="36sp"
+            android:visibility="invisible"
+            app:layout_constraintStart_toStartOf="@id/tv_total_per"
+            app:layout_constraintTop_toBottomOf="@id/tv_total_per" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tv_tip_result_per_person"
+            style="@style/Widget.TipTime.TextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="@string/per_person"
+            android:visibility="invisible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_tip_result_amount" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tv_tip_result_per_person_amt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="@string/_0_00"
+            android:textSize="36sp"
+            android:visibility="invisible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_tip_result_per_person" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

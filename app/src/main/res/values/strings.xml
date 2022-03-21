@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">Tip Time</string>
+    <string name="cost_of_service">Cost of Service</string>
+    <string name="how_was_your_service">What percentage would you like to leave?</string>
+    <string name="number_people">How many people will be sharing the tip?</string>
+    <string name="round_up_tip">Round up tip?</string>
+    <string name="calculate">Calculate</string>
+    <string name="tip_amount">Tip Amount</string>
+    <string name="per_person">Per person</string>
+    <string name="_0_00">$0.00</string>
+    <string name="base_pct">20%</string>
+    <string name="base_num">1</string>
+    <string name="percent_num">%d%%</string>
+    <string name="total_with_tip">Total with Tip</string>
+</resources>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="tan_light">#FFdbcca5</color>
+    <color name="tan">#FFa99b76</color>
+    <color name="tan_dark">#FF796d4a</color>
+    <color name="bluegray_light">#FFa6b4db</color>
+    <color name="bluegray">#FF7684a9</color>
+    <color name="bluegray_dark">#FF49577a</color>
+    <color name="error_red">#FFd50000</color>
+</resources>
